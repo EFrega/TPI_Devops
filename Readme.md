@@ -108,13 +108,21 @@ Cada push a la rama main ejecuta:
 
 ## 🔗 Docker Hub:
 
-https://hub.docker.com/repository/docker/USUARIO/tpi-todolist
+https://hub.docker.com/repository/docker/agataa011/tpi-todolist/general
 
 ## 📸 Capturas del pipeline:
 
 ✅ Tests ejecutándose:
 
+![Imagen de PipelineTest](./img/pipelineTest.png)
+
+✅ Creación de Imagen en DockerHub:
+
+![Imagen de PipelineDocker](./img/pipelineDocker.png)
+
 🐳 Imagen subida a Docker Hub:
+
+![Imagen de DockerHub](./img/DockerHub_Repository_Evidence.jpg)
 
 ## ☁️ Despliegue
 
