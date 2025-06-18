@@ -21,6 +21,26 @@ Se trata de una API REST sencilla para gestionar tareas (to-do list), desarrolla
 
 ---
 
+## Instrucciones para correr localmente este proyecto con Docker
+
+- Asegurate de tener Docker desktop instalado y ejecutandose
+- Asegurate de contar con al menos 500mb de espacio en disco
+- Abre una terminal y una vez en el directorio raiz del proyecto ejecuta:
+
+```bash
+docker compose --build
+```
+
+- Abre otra terminal también  en el directorio raiz del proyecto y ejecuta: 
+
+```bash
+cd frontend-todolist
+npm install
+npm start
+```
+
+
+
 ## 📦 Estructura del Proyecto
 
 tpi-todolist/<br>
@@ -105,9 +125,11 @@ https://hub.docker.com/repository/docker/USUARIO/tpi-todolist
 
 # 👥 Roles del equipo
 
-Desarrollo y backend: [Tu nombre]
-CI/CD: [Tu nombre]
-Dockerización: [Tu nombre]
+- Desarrollo backend: [Adrian Agata]
+- Desarrollo frontend: [Ezequiel Frega]
+- Desarrollo Testing & QA: [Trinidad Pasi]
+- CI/CD: [Alejandro Loredo]
+- Dockerización: [Ricardo Gieco]
 
 ## ✅ Conclusiones
 
