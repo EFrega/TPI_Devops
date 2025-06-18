@@ -23,23 +23,40 @@ Se trata de una API REST sencilla para gestionar tareas (to-do list), desarrolla
 
 ## Instrucciones para correr localmente este proyecto con Docker
 
+- Clona el repositorio a tu entorno local usando la terminal y el comando:
+```bash
+git clone https://github.com/EFrega/TPI_Devops.git
+```
 - Asegurate de tener Docker desktop instalado y ejecutandose
 - Asegurate de contar con al menos 500mb de espacio en disco
 - Abre una terminal y una vez en el directorio raiz del proyecto ejecuta:
-
 ```bash
 docker compose --build
 ```
 
-- Abre otra terminal también  en el directorio raiz del proyecto y ejecuta: 
-
+- Luego abre otra terminal también  en el directorio raiz del proyecto y ejecuta: 
 ```bash
 cd frontend-todolist
 npm install
 npm start
 ```
 
+## 🧪 Testing
 
+Los tests están automatizados con **Jest** y **Supertest**.
+
+- Si ejecutas el proyecto en forma local sin utilizar Docker, puedes ejecutar las pruebas con:
+```bash
+npm install
+npm test
+```
+
+- En CI, se conectan automáticamente a un contenedor MongoDB usando:
+```bash
+MONGO_URL="mongodb://127.0.0.1:27017/todolist" npm test
+```
+
+---
 
 ## 📦 Estructura del Proyecto
 
@@ -61,22 +78,6 @@ tpi-todolist/<br>
 │      └── index.js/<br>
 └── README.md<br>
 
-## 🧪 Testing
-
-Los tests están automatizados con **Jest** y **Supertest**.
-
-Ejecutar localmente con:
-
-```bash
-npm install
-npm test
-```
-
-En CI, se conectan automáticamente a un contenedor MongoDB usando:
-
-```bash
-MONGO_URL="mongodb://127.0.0.1:27017/todolist" npm test
-```
 
 ## 🐳 Dockerización
 
