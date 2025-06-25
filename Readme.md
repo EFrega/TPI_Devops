@@ -6,18 +6,55 @@ Aplicación desarrollada como Trabajo Práctico Integrador (TPI) para aplicar pr
 
 ## 🚀 Descripción
 
-Se trata de una API REST sencilla para gestionar tareas (to-do list), desarrollada en **Node.js**, con persistencia en **MongoDB**, y con integración CI/CD mediante **GitHub Actions** y **Docker Hub**.
+Se trata de una API REST sencilla para gestionar tareas (to-do list), desarrollada en *Node.js, con persistencia en **MongoDB, y con integración CI/CD mediante **GitHub Actions* y *Docker Hub*.
 
 ---
 
 ## 🛠️ Tecnologías utilizadas
 
-- Node.js (Express)
-- MongoDB (vía Mongoose)
-- Docker y Docker Compose
-- GitHub Actions (CI/CD)
-- Jest + Supertest (testing)
-- Docker Hub (almacenamiento de imágenes)
+•⁠  ⁠Node.js (Express)
+•⁠  ⁠MongoDB (vía Mongoose)
+•⁠  ⁠Docker y Docker Compose
+•⁠  ⁠GitHub Actions (CI/CD)
+•⁠  ⁠Jest + Supertest (testing)
+•⁠  ⁠Docker Hub (almacenamiento de imágenes)
+
+---
+
+## Instrucciones para correr localmente este proyecto con Docker
+
+•⁠  ⁠Clona el repositorio a tu entorno local usando la terminal y el comando:
+⁠ bash
+git clone https://github.com/EFrega/TPI_Devops.git
+ ⁠
+•⁠  ⁠Asegurate de tener Docker desktop instalado y ejecutandose
+•⁠  ⁠Asegurate de contar con al menos 500mb de espacio en disco
+•⁠  ⁠Abre una terminal y una vez en el directorio raiz del proyecto ejecuta:
+⁠ bash
+docker compose --build
+ ⁠
+
+•⁠  ⁠Luego abre otra terminal también  en el directorio raiz del proyecto y ejecuta: 
+⁠ bash
+cd frontend-todolist
+npm install
+npm start
+ ⁠
+
+## 🧪 Testing
+
+Los tests están automatizados con *Jest* y *Supertest*.
+
+•⁠  ⁠Si ejecutas el proyecto en forma local sin utilizar Docker, puedes ejecutar las pruebas con:
+⁠ bash
+npm install
+npm test
+ ⁠
+
+•⁠  ⁠En CI, se conectan automáticamente a un contenedor MongoDB usando:
+⁠ bash
+MONGO_URL="mongodb://127.0.0.1:27017/todolist" npm test
+ ⁠
 
 ---
 
@@ -41,36 +78,20 @@ tpi-todolist/<br>
 │      └── index.js/<br>
 └── README.md<br>
 
-## 🧪 Testing
-
-Los tests están automatizados con **Jest** y **Supertest**.
-
-Ejecutar localmente con:
-
-```bash
-npm install
-npm test
-```
-
-En CI, se conectan automáticamente a un contenedor MongoDB usando:
-
-```bash
-MONGO_URL="mongodb://127.0.0.1:27017/todolist" npm test
-```
 
 ## 🐳 Dockerización
 
 Build de la imagen:
 
-```bash
+⁠ bash
 docker build -t tpi-todolist .
-```
+ ⁠
 
 Correr con Docker Compose:
 
-```bash
+⁠ bash
 docker-compose up --build
-```
+ ⁠
 
 La app estará disponible en:
 
@@ -80,34 +101,44 @@ La app estará disponible en:
 
 Cada push a la rama main ejecuta:
 
-- Instalación de dependencias
-- Pruebas automatizadas
-- Construcción de imagen Docker
-- Push automático a Docker Hub
+•⁠  ⁠Instalación de dependencias
+•⁠  ⁠Pruebas automatizadas
+•⁠  ⁠Construcción de imagen Docker
+•⁠  ⁠Push automático a Docker Hub
 
 ## 🔗 Docker Hub:
 
-https://hub.docker.com/repository/docker/USUARIO/tpi-todolist
+https://hub.docker.com/repository/docker/agataa011/tpi-todolist/general
 
 ## 📸 Capturas del pipeline:
 
 ✅ Tests ejecutándose:
 
+![Imagen de PipelineTest](./img/pipelineTest.png)
+
+✅ Creación de Imagen en DockerHub:
+
+![Imagen de PipelineDocker](./img/pipelineDocker.png)
+
 🐳 Imagen subida a Docker Hub:
+
+![Imagen de DockerHub](./img/DockerHub_Repository_Evidence.jpg)
 
 ## ☁️ Despliegue
 
 (✳️ Opcional) Puede desplegarse en servicios como:
 
-- Render.com
-- Railway.app
-- Heroku
+•⁠  ⁠Render.com
+•⁠  ⁠Railway.app
+•⁠  ⁠Heroku
 
 # 👥 Roles del equipo
 
-Desarrollo y backend: [Tu nombre]
-CI/CD: [Tu nombre]
-Dockerización: [Tu nombre]
+•⁠  ⁠Desarrollo backend: [Adrian Agata]
+•⁠  ⁠Desarrollo frontend: [Ezequiel Frega]
+•⁠  ⁠Desarrollo Testing & QA: [Trinidad Pasi]
+•⁠  ⁠CI/CD: [Alejandro Loredo]
+•⁠  ⁠Dockerización: [Ricardo Gieco]
 
 ## ✅ Conclusiones
 
